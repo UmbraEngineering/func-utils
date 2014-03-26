@@ -20,8 +20,7 @@ second('a', 'b', 'c');
 ```
 
 
-##### f.first ( void )
-##### f.identity ( void )
+##### f.first / f.identity ( void )
 
 Aliases for `f.arg(1)`, always returns the first argument on each call.
 
@@ -46,8 +45,7 @@ oddOnly(); // true
 ```
 
 
-##### f.odd ( void )
-##### f.even ( void )
+##### f.odd / f.even ( void )
 
 Aliases for `f.nth(2)` and `f.nth(2, 1)`.
 
