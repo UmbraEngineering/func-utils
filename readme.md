@@ -109,3 +109,42 @@ var names = people.map(f.pick('name'));
 // [ "bob", "sarah" ]
 ```
 
+
+##### f.filterMap ( filter, map )
+
+Filter and map in one iteration using a reduce.
+
+```javascript
+var people = [
+	{name: 'bob', gender: 'male', age: 23},
+	{name: 'sarah', gender: 'female', age: 19},
+	{name: 'sally', gender: 'female', age: 25}
+];
+
+var girlsOnly = function(person) {
+	return person.gender === 'female';
+};
+
+var getName = function(person) {
+	return person.name;
+};
+
+var girlsNames = people.reduce(f.filterMap(girlsOnly, getName));
+// [ "sarah", "sally" ]
+```
+
+
+##### f.where ( prop, value )
+
+Return true for objects where the object's property `prop` matches the given value.
+
+```javascript
+var people = [
+	{name: 'bob', gender: 'male', age: 23},
+	{name: 'sarah', gender: 'female', age: 19},
+	{name: 'sally', gender: 'female', age: 25}
+];
+
+var girls = people.filter(f.where('gender', 'female'));
+```
+
