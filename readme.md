@@ -8,7 +8,7 @@ Functions
 ---------
 
 
-#### f.arg ( n )
+##### f.arg ( n )
 
 Returns the nth argument on each call.
 
@@ -20,13 +20,13 @@ second('a', 'b', 'c');
 ```
 
 
-#### f.first ( void )
-f.identity ( void )
+##### f.first ( void )
+##### f.identity ( void )
 
 Aliases for `f.arg(1)`, always returns the first argument on each call.
 
 
-#### f.nth ( n[, offset ])
+##### f.nth ( n[, offset ])
 
 Returns `true` on each nth call to the function, and false on every other call.
 
@@ -46,8 +46,8 @@ oddOnly(); // true
 ```
 
 
-#### f.odd ( void )
-f.even ( void )
+##### f.odd ( void )
+##### f.even ( void )
 
 Aliases for `f.nth(2)` and `f.nth(2, 1)`.
 
@@ -62,7 +62,7 @@ nums.filter(f.even());
 ```
 
 
-#### f.iota ([ start[, skip ]])
+##### f.iota ([ start[, skip ]])
 
 Returns an increasing value with each call.
 
@@ -81,7 +81,7 @@ iota(); // 5
 ```
 
 
-#### f.not ( func )
+##### f.not ( func )
 
 Returns a new function that calls through to the given function, but returns a negated return value.
 
@@ -97,7 +97,7 @@ alwaysFalse(); // false
 ```
 
 
-#### f.pick ( prop )
+##### f.pick ( prop )
 
 Selects a specific named property from objects.
 
